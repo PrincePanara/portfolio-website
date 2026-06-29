@@ -82,7 +82,7 @@ export function Navbar() {
               transition={{ type: "spring", stiffness: 400 }}
             >
               <NextImage 
-                src="/avatar.png" 
+                src="/logo.png" 
                 alt="Prince Panara Logo" 
                 fill 
                 className="object-cover"
