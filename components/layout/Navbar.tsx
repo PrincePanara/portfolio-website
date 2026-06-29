@@ -81,10 +81,10 @@ export function Navbar() {
               whileHover={{ rotate: 5, scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
-              <NextImage 
-                src="/logo.png" 
-                alt="Prince Panara Logo" 
-                fill 
+              <NextImage
+                src="/avatar.png"
+                alt="Prince Panara Logo"
+                fill
                 className="object-cover"
                 sizes="36px"
               />
