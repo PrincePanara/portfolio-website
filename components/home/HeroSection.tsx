@@ -13,7 +13,7 @@ const socials = [
   { href: "https://x.com/princepanara", icon: TwitterIcon, label: "Twitter" },
   { href: "https://www.linkedin.com/in/prince-panara-88228b311/", icon: LinkedinIcon, label: "LinkedIn" },
   { href: "https://github.com/princepanara", icon: GithubIcon, label: "GitHub" },
-  { href: "/resume.pdf", icon: Copy, label: "Resume" }, // using copy as placeholder for doc
+  { href: "/prince-panara-resume.pdf", icon: Copy, label: "Resume" }, // using copy as placeholder for doc
 ];
 
 export function HeroSection() {
