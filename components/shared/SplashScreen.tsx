@@ -40,7 +40,7 @@ export function SplashScreen() {
   if (!mounted) return null;
 
   // Premium easing curve (Apple/Linear style)
-  const premiumEasing = [0.16, 1, 0.3, 1];
+  const premiumEasing: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
   const textVariants = {
     hidden: { y: 20, opacity: 0, filter: "blur(8px)" },
