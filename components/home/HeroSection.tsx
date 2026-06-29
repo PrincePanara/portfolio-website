@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Copy, BadgeCheck, ArrowRight, ArrowDown } from "lucide-react";
-import { GithubIcon, TwitterIcon, LinkedinIcon, InstagramIcon } from "@/components/icons/SocialIcons";
+import { GithubIcon, TwitterIcon, LinkedinIcon } from "@/components/icons/SocialIcons";
 import { InteractiveAvatar } from "../shared/InteractiveAvatar";
 import { Typewriter } from "@/components/ui/typewriter";
 
@@ -13,7 +13,6 @@ const socials = [
   { href: "https://x.com/princepanara", icon: TwitterIcon, label: "Twitter" },
   { href: "https://www.linkedin.com/in/prince-panara-88228b311/", icon: LinkedinIcon, label: "LinkedIn" },
   { href: "https://github.com/princepanara", icon: GithubIcon, label: "GitHub" },
-  { href: "https://instagram.com/princepanara", icon: InstagramIcon, label: "Instagram" },
   { href: "/resume.pdf", icon: Copy, label: "Resume" }, // using copy as placeholder for doc
 ];
 

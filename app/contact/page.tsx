@@ -8,14 +8,13 @@ import {
   Mail, Phone, MapPin,
   Send, CheckCircle, AlertCircle,
 } from "lucide-react";
-import { GithubIcon, TwitterIcon, LinkedinIcon, InstagramIcon } from "@/components/icons/SocialIcons";
+import { GithubIcon, TwitterIcon, LinkedinIcon } from "@/components/icons/SocialIcons";
 import { toast } from "sonner";
 
 const socialLinks = [
   { icon: GithubIcon, label: "GitHub", href: "https://github.com/princepanara" },
   { icon: TwitterIcon, label: "X / Twitter", href: "https://x.com/princepanara" },
   { icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/prince-panara-88228b311/" },
-  { icon: InstagramIcon, label: "Instagram", href: "https://instagram.com/princepanara" },
 ];
 
 export default function ContactPage() {
