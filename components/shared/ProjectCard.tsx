@@ -11,6 +11,7 @@ export const getIconSlug = (tag: string) => {
   if (t.includes('next')) return 'nextdotjs';
   if (t.includes('react')) return 'react';
   if (t.includes('typescript')) return 'typescript';
+  if (t.includes('javascript')) return 'javascript';
   if (t.includes('tailwind')) return 'tailwindcss';
   if (t.includes('firebase')) return 'firebase';
   if (t.includes('framer')) return 'framer';
@@ -30,7 +31,7 @@ export const getIconSlug = (tag: string) => {
   if (t.includes('streamlit')) return 'streamlit';
   if (t.includes('esp')) return 'espressif';
   if (t.includes('tensor')) return 'tensorflow';
-  return t.replace(/[^a-z0-9]/g, '');
+  return null;
 };
 
 function TechIcon({ tag }: { tag: string }) {
@@ -38,7 +39,7 @@ function TechIcon({ tag }: { tag: string }) {
   const slug = getIconSlug(tag);
   return (
     <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm shrink-0" title={tag}>
-      {!error ? (
+      {slug && !error ? (
         <img
           src={`https://cdn.simpleicons.org/${slug}/black`}
           alt={tag}
