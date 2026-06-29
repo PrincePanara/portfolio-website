@@ -23,7 +23,7 @@ export const getIconSlug = (tag: string) => {
   if (t.includes('d3')) return 'd3dotjs';
   if (t.includes('openai')) return 'openai';
   if (t.includes('prisma')) return 'prisma';
-  if (t.includes('css')) return 'css3';
+  if (t.includes('css')) return 'css';
   if (t.includes('html')) return 'html5';
   if (t.includes('figma')) return 'figma';
   if (t.includes('storybook')) return 'storybook';
