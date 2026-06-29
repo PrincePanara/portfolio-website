@@ -3,6 +3,9 @@
 export function GridBackground() {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1]" aria-hidden="true">
+      {/* Dark Mode Premium Spotlight Glow */}
+      <div className="hidden dark:block absolute top-[-30%] left-1/2 -translate-x-1/2 w-[70vw] h-[700px] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.12)_0%,_transparent_70%)] rounded-[100%] blur-[80px] opacity-60 mix-blend-screen" />
+      
       {/* Paper Grid Pattern */}
       <svg
         className="absolute inset-0 w-full h-full opacity-[0.35] dark:opacity-20"
