@@ -17,6 +17,24 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "Task & Project Management System",
+    title: "Task & Project Management System",
+    description: "A modern Task & Project Management System that helps users create and manage projects, organize tasks, collaborate with team members, track progress, manage deadlines, and streamline workflows through a clean and intuitive interface.",
+    longDescription: " A modern Task & Project Management System that helps users create and manage projects, organize tasks, collaborate with team members, track progress, manage deadlines, and streamline workflows through a clean and intuitive interface.s",
+    category: "web",
+    tags: ["HTML5", "CSS3", "JavaScript"],
+    coverImage: "/images/projects/tasks-projects.png",
+    screenshots: [],
+    liveUrl: "https://yourprojectify.vercel.app",
+    githubUrl: "https://github.com/",
+    featured: true,
+    year: "2024",
+    status: "live",
+    metrics: [
+      { label: "Type", value: "Website" }
+    ]
+  },
+  {
     id: "boxcricker",
     title: "BoxCricker",
     description: "A complete UI/UX experience for BoxCricker, including both User Panel and Admin Panel interfaces.",

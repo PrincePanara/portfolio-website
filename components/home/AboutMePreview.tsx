@@ -23,10 +23,10 @@ export function AboutMePreview() {
             About Me
           </h3>
           <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4 tracking-tight">
-            I am a passionate Developer and UI/UX Designer with a strong interest in creating meaningful digital experiences.
+            I build digital experiences that blend form and function.
           </h2>
           <p className="text-base text-[var(--text-secondary)] leading-relaxed mb-6">
-            I enjoy solving problems, exploring new ideas, and building products that make a difference. I believe in continuous learning, creativity, and using technology to bring ideas to life.
+            I’m passionate about building things that matter. As a Developer and UI/UX Designer, I enjoy bringing ideas to life through thoughtful design and practical solutions. I love exploring new technologies, solving challenges, and creating experiences that are simple, useful, and enjoyable for people. My goal is to keep learning, keep building, and create work that makes a difference.
           </p>
           <Link
             href="/about"
