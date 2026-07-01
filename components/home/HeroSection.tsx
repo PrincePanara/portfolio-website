@@ -62,6 +62,8 @@ export function HeroSection() {
                     "a Full Stack Developer.",
                     "a UI/UX Designer.",
                     "a Creative Thinker.",
+                    "Prince Panara.",
+                    "Prince Panara.",
 
                   ]}
                   speed={70}
