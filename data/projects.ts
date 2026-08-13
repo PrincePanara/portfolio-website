@@ -115,7 +115,7 @@ export const projects: Project[] = [
     coverImage: "/images/projects/Icelandhostel.png",
     screenshots: [],
     liveUrl: "https://icelandhostel.vercel.app/",
-    githubUrl: "",
+    githubUrl: "https://github.com/",
     featured: true,
     year: "2026",
     status: "live",
