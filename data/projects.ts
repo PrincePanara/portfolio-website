@@ -105,6 +105,24 @@ export const projects: Project[] = [
       { label: "Type", value: "Mobile Application" }
     ]
   },
+  {
+    id: "icelandhostel",
+    title: "Iceland Hostel",
+    description: "A smart hostel management landing page offering simple, efficient, and intelligent solutions for modern student housing.",
+    longDescription: "A comprehensive Smart Hostel Management landing page designed for modern student housing. The platform offers a simple, efficient, and intelligent solution to manage rooms, students, fees, facilities, and daily operations. Built with a modern web stack, it features a responsive and engaging user interface with smooth animations.",
+    category: "web",
+    tags: ["React", "TypeScript", "Vite", "Framer Motion", "Tailwind CSS"],
+    coverImage: "/images/projects/Icelandhostel.png",
+    screenshots: [],
+    liveUrl: "https://icelandhostel.vercel.app/",
+    githubUrl: "",
+    featured: true,
+    year: "2026",
+    status: "live",
+    metrics: [
+      { label: "Type", value: "Website" }
+    ]
+  }
 
 ];
 
