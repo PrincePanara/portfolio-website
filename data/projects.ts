@@ -130,7 +130,7 @@ export const projects: Project[] = [
     longDescription: "A comprehensive Student Work Management platform built to help students organize and manage their academic work efficiently. The platform allows students to create and manage subjects, projects, mini projects, major projects, lab work, classwork, assignments, and daily tasks. Students can track their progress, manage deadlines, organize academic activities, and keep all their study-related work structured in one centralized platform. The interface is designed with a clean, modern, and responsive user experience to make academic planning and task management simple and efficient.",
     category: "web",
     tags: ["React", "TypeScript", "Firebase"],
-    coverImage: "/images/projects/.png",
+    coverImage: "/images/projects/student-work-manager.png",
     screenshots: [],
     liveUrl: "https://qubesolister.vercel.app",
     githubUrl: "https://github.com/",
