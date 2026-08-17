@@ -122,8 +122,25 @@ export const projects: Project[] = [
     metrics: [
       { label: "Type", value: "Website" }
     ]
+  },
+  {
+    id: "student-work-manager",
+    title: "Student Work Manager",
+    description: "A smart student productivity platform designed to organize projects, subjects, lab work, classwork, assignments, tasks, and academic activities in one place.",
+    longDescription: "A comprehensive Student Work Management platform built to help students organize and manage their academic work efficiently. The platform allows students to create and manage subjects, projects, mini projects, major projects, lab work, classwork, assignments, and daily tasks. Students can track their progress, manage deadlines, organize academic activities, and keep all their study-related work structured in one centralized platform. The interface is designed with a clean, modern, and responsive user experience to make academic planning and task management simple and efficient.",
+    category: "web",
+    tags: ["React", "TypeScript", "Firebase"],
+    coverImage: "/images/projects/.png",
+    screenshots: [],
+    liveUrl: "https://qubesolister.vercel.app",
+    githubUrl: "https://github.com/",
+    featured: true,
+    year: "2026",
+    status: "live",
+    metrics: [
+      { label: "Type", value: "Web Application" }
+    ]
   }
-
 ];
 
 export const featuredProjects = projects.filter((p) => p.featured);
