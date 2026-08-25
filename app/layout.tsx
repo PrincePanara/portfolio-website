@@ -62,6 +62,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export const viewport: Viewport = {
@@ -78,8 +81,32 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Prince Panara",
+    url: "https://princepanara.com",
+    image: "https://princepanara.com/og-image.png",
+    sameAs: [
+      "https://github.com/PrincePanara",
+      "https://www.linkedin.com/in/prince-panara",
+      "https://twitter.com/princepanara",
+    ],
+    jobTitle: "Software Developer & UI/UX Designer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Freelance",
+    },
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-body antialiased" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
