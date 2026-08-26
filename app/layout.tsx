@@ -85,42 +85,42 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Prince Panara",
-      url: "https://princepanara.com",
-      image: "https://princepanara.com/og-image.png",
-      sameAs: [
-        "https://github.com/PrincePanara",
-        "https://www.linkedin.com/in/prince-panara",
-        "https://twitter.com/princepanara",
-      ],
-      jobTitle: "Software Developer & UI/UX Designer",
-      worksFor: {
-        "@type": "Organization",
-        name: "Freelance",
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        name: "Prince Panara",
+        url: "https://princepanara.com",
+        image: "https://princepanara.com/og-image.png",
+        sameAs: [
+          "https://github.com/PrincePanara",
+          "https://www.linkedin.com/in/prince-panara",
+          "https://twitter.com/princepanara",
+        ],
+        jobTitle: "Software Developer & UI/UX Designer",
+        worksFor: {
+          "@type": "Organization",
+          name: "Freelance",
+        },
       },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Prince Panara",
-      url: "https://princepanara.com",
-      description: "Portfolio of Prince Panara, a full-stack developer and UI/UX designer.",
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://princepanara.com" },
-        { "@type": "ListItem", position: 2, name: "Projects", item: "https://princepanara.com/projects" },
-        { "@type": "ListItem", position: 3, name: "About", item: "https://princepanara.com/about" },
-        { "@type": "ListItem", position: 4, name: "Contact", item: "https://princepanara.com/contact" },
-      ]
-    }
-  ];
+      {
+        "@type": "WebSite",
+        name: "Prince Panara",
+        url: "https://princepanara.com",
+        description: "Portfolio of Prince Panara, a full-stack developer and UI/UX designer.",
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://princepanara.com" },
+          { "@type": "ListItem", position: 2, name: "Projects", item: "https://princepanara.com/projects" },
+          { "@type": "ListItem", position: 3, name: "About", item: "https://princepanara.com/about" },
+          { "@type": "ListItem", position: 4, name: "Contact", item: "https://princepanara.com/contact" },
+        ]
+      }
+    ]
+  };
 
   return (
     <html lang="en" suppressHydrationWarning>

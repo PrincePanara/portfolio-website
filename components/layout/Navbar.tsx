@@ -19,16 +19,16 @@ const navLinks = [
   { href: "/", label: "Home", icon: Home },
   { href: "/about", label: "About", icon: User },
   { href: "/projects", label: "Projects", icon: FolderOpen },
-  { href: "/case-studies", label: "Cases", icon: BookOpen },
+  { href: "/case-studies", label: "Case Studies", icon: BookOpen },
   { href: "/skills", label: "Skills", icon: Zap },
   { href: "/resume", label: "Resume", icon: FileText },
   { href: "/contact", label: "Contact", icon: Mail },
 ];
 
 const socialLinks = [
-  { href: "https://github.com/princepanara", icon: GithubIcon, label: "GitHub" },
-  { href: "https://x.com/princepanara", icon: TwitterIcon, label: "Twitter" },
-  { href: "https://www.linkedin.com/feed/", icon: LinkedinIcon, label: "LinkedIn" },
+  { href: "https://github.com/princepanara", icon: GithubIcon, label: "GitHub profile" },
+  { href: "https://x.com/princepanara", icon: TwitterIcon, label: "X profile" },
+  { href: "https://www.linkedin.com/in/prince-panara-88228b311/", icon: LinkedinIcon, label: "LinkedIn profile" },
 ];
 
 export function Navbar() {
@@ -74,7 +74,7 @@ export function Navbar() {
         )}
         style={{ height: "var(--nav-height)" }}
       >
-        <nav className="container-xl h-full flex items-center justify-between">
+        <nav aria-label="Main navigation" className="container-xl h-full flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group" id="nav-logo">
             <motion.div
               className="relative w-9 h-9 rounded-full overflow-hidden flex items-center justify-center shadow-sm border border-[var(--border)]"
@@ -82,7 +82,7 @@ export function Navbar() {
               transition={{ type: "spring", stiffness: 400 }}
             >
               <NextImage
-                src="/logo.png"
+                src="/avatar.png"
                 alt="Prince Panara - Official Logo"
                 width={32}
                 height={32}
@@ -128,6 +128,7 @@ export function Navbar() {
             {/* Search / Command */}
             <motion.button
               id="nav-search"
+              aria-label="Search website (Press ⌘K)"
               onClick={() => setCommandOpen(true)}
               className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[var(--border)] text-[var(--text-tertiary)] text-[13px] hover:border-[var(--border-strong)] hover:text-[var(--text-secondary)] transition-fast"
               whileHover={{ scale: 1.02 }}
@@ -178,6 +179,8 @@ export function Navbar() {
               className="lg:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)] transition-fast"
               whileTap={{ scale: 0.9 }}
               aria-label="Toggle mobile menu"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-navigation"
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -210,6 +213,7 @@ export function Navbar() {
               onClick={() => setMobileOpen(false)}
             />
             <motion.div
+              id="mobile-navigation"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
