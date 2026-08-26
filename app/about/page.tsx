@@ -5,12 +5,12 @@ import { education } from "@/data/experience";
 import { Briefcase, Calendar, ExternalLink, ChevronRight, GraduationCap, Trophy } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Prince Panara | Full-Stack Developer & Designer",
   description:
     "Learn about Prince Panara — his journey, values, education, and the experiences that shaped him as a developer and designer.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About | Prince Panara",
+    title: "About Prince Panara | Full-Stack Developer & Designer",
     description: "Learn about Prince Panara — his journey, values, education, and the experiences that shaped him as a developer and designer.",
     url: "https://princepanara.com/about",
   },

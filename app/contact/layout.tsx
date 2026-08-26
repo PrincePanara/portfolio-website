@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Prince Panara | Freelance Developer",
   description: "Get in touch with me for freelance projects, collaboration, or any other inquiries.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact | Prince Panara",
+    title: "Contact Prince Panara | Freelance Developer",
     description: "Get in touch with me for freelance projects, collaboration, or any other inquiries.",
     url: "https://princepanara.com/contact",
   },

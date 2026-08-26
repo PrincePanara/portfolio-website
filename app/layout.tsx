@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { ThemeProvider } from "next-themes";
 import { LenisProvider } from "@/providers/LenisProvider";
 import { Navbar } from "@/components/layout/Navbar";
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     title: "Prince Panara — Software Developer, UI/UX Designer & Founder",
     description: "Full-stack developer and UI/UX designer.",
     creator: "@princepanara",
-    images: ["/og-image.png"],
+    images: ["https://princepanara.com/og-image.png"],
   },
   robots: {
     index: true,
@@ -108,6 +109,16 @@ export default function RootLayout({
       name: "Prince Panara",
       url: "https://princepanara.com",
       description: "Portfolio of Prince Panara, a full-stack developer and UI/UX designer.",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://princepanara.com" },
+        { "@type": "ListItem", position: 2, name: "Projects", item: "https://princepanara.com/projects" },
+        { "@type": "ListItem", position: 3, name: "About", item: "https://princepanara.com/about" },
+        { "@type": "ListItem", position: 4, name: "Contact", item: "https://princepanara.com/contact" },
+      ]
     }
   ];
 
@@ -117,6 +128,25 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {/* Google tag (gtag.js) */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-P2LPS98BQL`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-P2LPS98BQL', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
         />
       </head>
       <body className="font-body antialiased" suppressHydrationWarning>
