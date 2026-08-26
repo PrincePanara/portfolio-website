@@ -3,6 +3,12 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch with me for freelance projects, collaboration, or any other inquiries.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact | Prince Panara",
+    description: "Get in touch with me for freelance projects, collaboration, or any other inquiries.",
+    url: "https://princepanara.com/contact",
+  },
 };
 
 export default function ContactLayout({

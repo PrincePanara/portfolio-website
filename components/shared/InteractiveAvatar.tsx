@@ -62,7 +62,7 @@ export function InteractiveAvatar() {
       >
         <Image
           src="/avatar.png"
-          alt="Profile Avatar"
+          alt="Prince Panara - Software Developer and Designer Profile Avatar"
           fill
           className="object-cover"
           sizes="(max-width: 768px) 112px, 128px"

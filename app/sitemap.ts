@@ -11,12 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/resume',
     '/case-studies',
-    '/playground'
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString(),
+    lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: route === '' ? 1.0 : 0.8,
+    priority: route === '' ? 1.0 : ['/projects', '/about'].includes(route) ? 0.9 : 0.8,
   }));
 
   return routes;

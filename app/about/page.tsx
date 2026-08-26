@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Learn about Prince Panara — his journey, values, education, and the experiences that shaped him as a developer and designer.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About | Prince Panara",
+    description: "Learn about Prince Panara — his journey, values, education, and the experiences that shaped him as a developer and designer.",
+    url: "https://princepanara.com/about",
+  },
 };
 
 const values = [

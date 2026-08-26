@@ -72,7 +72,7 @@ export function ProjectCard({ project, color = "#6C47FF" }: ProjectCardProps) {
         {project.coverImage && !imgError ? (
           <img
             src={project.coverImage}
-            alt={project.title}
+            alt={`Cover image for ${project.title} project - Prince Panara`}
             className="w-full h-full object-cover"
             onError={() => setImgError(true)}
           />

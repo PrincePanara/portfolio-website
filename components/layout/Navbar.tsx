@@ -82,11 +82,11 @@ export function Navbar() {
               transition={{ type: "spring", stiffness: 400 }}
             >
               <NextImage
-                src="/avatar.png"
-                alt="Prince Panara Logo"
-                fill
-                className="object-cover"
-                sizes="36px"
+                src="/logo.png"
+                alt="Prince Panara - Official Logo"
+                width={32}
+                height={32}
+                className="rounded-lg object-contain w-full h-full"
               />
             </motion.div>
             <span className="font-display font-bold text-[var(--text-primary)] text-[16px] tracking-tight">

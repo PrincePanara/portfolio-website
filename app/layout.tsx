@@ -38,11 +38,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://princepanara.com",
-    siteName: "Prince Panara",
+    siteName: "Prince Panara Portfolio",
     title: "Prince Panara — Software Developer, UI/UX Designer & Founder",
     description:
-      "Full-stack developer and UI/UX designer. Building world-class digital products.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Prince Panara" }],
+      "Prince Panara is a full-stack developer, UI/UX designer, and mobile app developer building world-class digital products.",
+    images: [{ url: "https://princepanara.com/og-image.png", width: 1200, height: 630, alt: "Prince Panara - Software Developer and Designer" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -84,23 +84,32 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Prince Panara",
-    url: "https://princepanara.com",
-    image: "https://princepanara.com/og-image.png",
-    sameAs: [
-      "https://github.com/PrincePanara",
-      "https://www.linkedin.com/in/prince-panara",
-      "https://twitter.com/princepanara",
-    ],
-    jobTitle: "Software Developer & UI/UX Designer",
-    worksFor: {
-      "@type": "Organization",
-      name: "Freelance",
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Prince Panara",
+      url: "https://princepanara.com",
+      image: "https://princepanara.com/og-image.png",
+      sameAs: [
+        "https://github.com/PrincePanara",
+        "https://www.linkedin.com/in/prince-panara",
+        "https://twitter.com/princepanara",
+      ],
+      jobTitle: "Software Developer & UI/UX Designer",
+      worksFor: {
+        "@type": "Organization",
+        name: "Freelance",
+      },
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Prince Panara",
+      url: "https://princepanara.com",
+      description: "Portfolio of Prince Panara, a full-stack developer and UI/UX designer.",
+    }
+  ];
 
   return (
     <html lang="en" suppressHydrationWarning>
