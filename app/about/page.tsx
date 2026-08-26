@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Prince Panara | Full-Stack Developer & Designer",
     description: "Learn about Prince Panara — his journey, values, education, and the experiences that shaped him as a developer and designer.",
-    url: "https://princepanara.com/about",
+    url: "https://princepanara.vercel.app/about",
   },
 };
 

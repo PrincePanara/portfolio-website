@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Case Studies | Prince Panara",
     description: "In-depth case studies of my major projects and the problems they solve.",
-    url: "https://princepanara.com/case-studies",
+    url: "https://princepanara.vercel.app/case-studies",
   },
 };
 

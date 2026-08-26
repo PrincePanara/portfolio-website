@@ -13,7 +13,7 @@ import { Toaster } from "sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://princepanara.com"),
+  metadataBase: new URL("https://princepanara.vercel.app"),
   title: {
     template: "%s | Prince Panara",
     default: "Prince Panara — Software Developer, UI/UX Designer & Founder",
@@ -33,24 +33,24 @@ export const metadata: Metadata = {
     "Web Designer",
     "Frontend Developer",
   ],
-  authors: [{ name: "Prince Panara", url: "https://princepanara.com" }],
+  authors: [{ name: "Prince Panara", url: "https://princepanara.vercel.app" }],
   creator: "Prince Panara",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://princepanara.com",
+    url: "https://princepanara.vercel.app",
     siteName: "Prince Panara Portfolio",
     title: "Prince Panara — Software Developer, UI/UX Designer & Founder",
     description:
       "Prince Panara is a full-stack developer, UI/UX designer, and mobile app developer building world-class digital products.",
-    images: [{ url: "https://princepanara.com/og-image.png", width: 1200, height: 630, alt: "Prince Panara - Software Developer and Designer" }],
+    images: [{ url: "https://princepanara.vercel.app/og-image.png", width: 1200, height: 630, alt: "Prince Panara - Software Developer and Designer" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Prince Panara — Software Developer, UI/UX Designer & Founder",
     description: "Full-stack developer and UI/UX designer.",
     creator: "@princepanara",
-    images: ["https://princepanara.com/og-image.png"],
+    images: ["https://princepanara.vercel.app/og-image.png"],
   },
   robots: {
     index: true,
@@ -91,8 +91,8 @@ export default function RootLayout({
       {
         "@type": "Person",
         name: "Prince Panara",
-        url: "https://princepanara.com",
-        image: "https://princepanara.com/og-image.png",
+        url: "https://princepanara.vercel.app",
+        image: "https://princepanara.vercel.app/og-image.png",
         sameAs: [
           "https://github.com/PrincePanara",
           "https://www.linkedin.com/in/prince-panara",
@@ -107,16 +107,16 @@ export default function RootLayout({
       {
         "@type": "WebSite",
         name: "Prince Panara",
-        url: "https://princepanara.com",
+        url: "https://princepanara.vercel.app",
         description: "Portfolio of Prince Panara, a full-stack developer and UI/UX designer.",
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://princepanara.com" },
-          { "@type": "ListItem", position: 2, name: "Projects", item: "https://princepanara.com/projects" },
-          { "@type": "ListItem", position: 3, name: "About", item: "https://princepanara.com/about" },
-          { "@type": "ListItem", position: 4, name: "Contact", item: "https://princepanara.com/contact" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://princepanara.vercel.app" },
+          { "@type": "ListItem", position: 2, name: "Projects", item: "https://princepanara.vercel.app/projects" },
+          { "@type": "ListItem", position: 3, name: "About", item: "https://princepanara.vercel.app/about" },
+          { "@type": "ListItem", position: 4, name: "Contact", item: "https://princepanara.vercel.app/contact" },
         ]
       }
     ]
