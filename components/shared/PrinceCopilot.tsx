@@ -375,21 +375,20 @@ export function PrinceCopilot() {
           >
             {/* ── Header ── */}
             <div
-              className="flex items-center gap-3 px-4 py-3 shrink-0"
-              style={{ background: "linear-gradient(135deg, #6C47FF 0%, #4f35cc 100%)" }}
+              className="flex items-center gap-3 px-4 py-3 shrink-0 bg-[var(--text-primary)] transition-colors"
             >
               {/* Avatar in header */}
               <CopilotAvatar size={38} showStatus glowRing={false} pulse={isTyping} />
 
               <div className="flex-1 min-w-0">
-                <p className="text-white font-bold text-[14px] leading-tight">Prince Copilot</p>
+                <p className="text-[var(--bg-primary)] font-bold text-[14px] leading-tight">Prince Copilot</p>
                 <div className="flex items-center gap-1.5 mt-0.5">
                   {isTyping ? (
-                    <p className="text-white/70 text-[11px] italic">Typing…</p>
+                    <p className="text-[var(--bg-primary)] opacity-70 text-[11px] italic">Typing…</p>
                   ) : (
                     <>
                       <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                      <p className="text-white/70 text-[11px]">Always available</p>
+                      <p className="text-[var(--bg-primary)] opacity-70 text-[11px]">Always available</p>
                     </>
                   )}
                 </div>
@@ -398,14 +397,14 @@ export function PrinceCopilot() {
               <button
                 onClick={() => setMinimized((p) => !p)}
                 aria-label={minimized ? "Expand" : "Minimize"}
-                className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+                className="w-7 h-7 rounded-full bg-[var(--bg-primary)]/10 hover:bg-[var(--bg-primary)]/20 flex items-center justify-center text-[var(--bg-primary)] transition-colors"
               >
                 {minimized ? <Maximize2 size={13} /> : <Minimize2 size={13} />}
               </button>
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close chat"
-                className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+                className="w-7 h-7 rounded-full bg-[var(--bg-primary)]/10 hover:bg-[var(--bg-primary)]/20 flex items-center justify-center text-[var(--bg-primary)] transition-colors"
               >
                 <X size={13} />
               </button>
