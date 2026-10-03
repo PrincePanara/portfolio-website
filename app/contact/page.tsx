@@ -21,31 +21,18 @@ export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
 
     try {
+      const formData = new FormData(e.currentTarget);
+      formData.append("access_key", "3539b6db-d5fa-4910-adba-87c74d5bbad7");
+
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: "3539b6db-d5fa-4910-adba-87c74d5bbad7",
-          name: form.name,
-          email: form.email,
-          subject: form.subject,
-          message: form.message,
-          from_name: form.name,
-        }),
+        body: formData,
       });
-
-      const contentType = res.headers.get("content-type");
-      if (!contentType || !contentType.includes("application/json")) {
-        throw new Error("Received an unexpected HTML response. Please refresh the page and try again.");
-      }
 
       const data = await res.json();
 
@@ -167,6 +154,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       id="contact-name"
+                      name="name"
                       required
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -180,6 +168,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       id="contact-email"
+                      name="email"
                       type="email"
                       required
                       value={form.email}
@@ -195,6 +184,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     id="contact-subject"
+                    name="subject"
                     required
                     value={form.subject}
                     onChange={(e) => setForm({ ...form, subject: e.target.value })}
@@ -208,6 +198,7 @@ export default function ContactPage() {
                   </label>
                   <textarea
                     id="contact-message"
+                    name="message"
                     required
                     rows={6}
                     value={form.message}
