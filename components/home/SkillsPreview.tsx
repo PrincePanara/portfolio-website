@@ -3,25 +3,30 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const techStack = [
-  { name: "HTML5", slug: "html5", color: "E34F26" },
-  { name: "CSS3", slug: "css3", color: "1572B6", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
-  { name: "JavaScript", slug: "javascript", color: "F7DF1E" },
-  { name: "TypeScript", slug: "typescript", color: "3178C6" },
-  { name: "React", slug: "react", color: "61DAFB" },
-  { name: "Node.js", slug: "nodedotjs", color: "339933" },
-  { name: "Firebase", slug: "firebase", color: "FFCA28" },
-  { name: "Flutter", slug: "flutter", color: "02569B" },
-  { name: "Dart", slug: "dart", color: "0175C2" },
-  { name: "Java", slug: "java", color: "007396", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
-  { name: "PHP", slug: "php", color: "777BB4" },
-  { name: "C++", slug: "cplusplus", color: "00599C" },
-  { name: "Git", slug: "git", color: "F05032" },
-  { name: "GitHub", slug: "github", color: "181717", darkColor: "ffffff" },
-  { name: "Figma", slug: "figma", color: "F24E1E" },
-  { name: "Vercel", slug: "vercel", color: "000000", darkColor: "ffffff",
-    iconUrl: "https://cdn.simpleicons.org/vercel/000000",
-    darkIconUrl: "https://cdn.simpleicons.org/vercel/ffffff" },
+type TechItem = {
+  name: string;
+  slug: string;
+  iconUrl?: string;
+};
+
+const techStack: TechItem[] = [
+  { name: "HTML5", slug: "html5" },
+  { name: "CSS3", slug: "css3" },
+  { name: "JavaScript", slug: "javascript" },
+  { name: "TypeScript", slug: "typescript" },
+  { name: "React", slug: "react" },
+  { name: "Node.js", slug: "nodejs" },
+  { name: "Firebase", slug: "firebase" },
+  { name: "Flutter", slug: "flutter" },
+  { name: "Dart", slug: "dart" },
+  { name: "Java", slug: "java" },
+  { name: "PHP", slug: "php" },
+  { name: "Python", slug: "python" },
+  { name: "C++", slug: "cplusplus" },
+  { name: "Git", slug: "git" },
+  { name: "GitHub", slug: "github" },
+  { name: "Figma", slug: "figma" },
+  { name: "Vercel", slug: "vercel" },
 ];
 
 export function SkillsPreview() {
@@ -86,7 +91,7 @@ export function SkillsPreview() {
               title={tech.name}
             >
               <img
-                src={tech.iconUrl || `https://cdn.simpleicons.org/${tech.slug}/${tech.color}`}
+                src={tech.iconUrl || `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.slug}/${tech.slug}-original.svg`}
                 alt={tech.name}
                 className="w-8 h-8 object-contain transition-transform group-hover:scale-110"
                 loading="lazy"

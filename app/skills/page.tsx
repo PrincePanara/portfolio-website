@@ -56,9 +56,19 @@ export default function SkillsPage() {
                 {cat.skills.map((skill, si) => (
                   <div key={skill.name}>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[14px] font-semibold text-[var(--text-primary)]">
-                        {skill.name}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        {skill.slug && (
+                          <img
+                            src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill.slug}/${skill.slug}-original.svg`}
+                            alt={skill.name}
+                            className="w-4 h-4 object-contain"
+                            loading="lazy"
+                          />
+                        )}
+                        <span className="text-[14px] font-semibold text-[var(--text-primary)]">
+                          {skill.name}
+                        </span>
+                      </div>
                       <span
                         className="text-[12px] font-bold font-mono"
                         style={{ color: cat.color }}
