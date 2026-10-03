@@ -26,15 +26,25 @@ export default function ContactPage() {
     setSending(true);
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "3539b6db-d5fa-4910-adba-87c74d5bbad7",
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+          from_name: form.name,
+        }),
       });
 
       const data = await res.json();
 
-      if (!res.ok) {
+      if (!data.success) {
         throw new Error(data.message || "Failed to send message");
       }
 
