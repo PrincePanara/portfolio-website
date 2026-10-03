@@ -42,6 +42,11 @@ export default function ContactPage() {
         }),
       });
 
+      const contentType = res.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        throw new Error("Received an unexpected HTML response. Please refresh the page and try again.");
+      }
+
       const data = await res.json();
 
       if (!data.success) {
